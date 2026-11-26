@@ -1246,3 +1246,30 @@
   margin: -4px 0 2px;
 }
 
+/* 2.1.2 Order-Status-Management
+ * Kitchen status buttons at status-specific column appearance.
+ * Kopya mula sa Frontend/src/style.css para sa contribution review.
+ */
+
+.kanban-column.preparing {
+  background: #f2f3f5;
+}
+
+.kanban-column.ready {
+  background: #eff4ef;
+}
+
+.kanban-action {
+  width: 100%;
+  margin-top: 8px;
+  background: #a96a46;
+  color: #fff;
+}
+
+.kanban-action.preparing {
+  background: #58779a;
+}
+
+.kanban-action.ready {
+  background: #5e946c;
+}

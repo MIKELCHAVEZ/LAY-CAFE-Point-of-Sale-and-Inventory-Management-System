@@ -1273,3 +1273,124 @@
 .kanban-action.ready {
   background: #5e946c;
 }
+
+
+/* 2.1.3 Order-Progress-Monitoring
+ * Kitchen overview, auto-refresh indicator, board layout at completed orders.
+ * Kopya mula sa Frontend/src/style.css para sa contribution review.
+ */
+
+.kitchen-stats {
+  margin-bottom: 16px;
+}
+
+.kitchen-meta {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 11px;
+  color: #9b9186;
+  margin: 19px 0 22px;
+}
+
+.kitchen-meta span:not(.live-dot) {
+  color: #d9c5b5;
+}
+
+.kanban-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.kanban-column {
+  background: #f4f2ee;
+  border: 1px solid #ebe7e1;
+  border-radius: 14px;
+  padding: 15px;
+  min-height: 360px;
+}
+
+.kanban-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 6px 19px;
+}
+
+.kanban-head h2 {
+  font-family: 'Playfair Display',serif;
+  font-size: 21px;
+  margin: 0 0 5px;
+}
+
+.kanban-head p {
+  font-size: 11px;
+  color: #988c80;
+  margin: 0;
+}
+
+.kanban-head>span {
+  width: 29px;
+  height: 29px;
+  background: #fff;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 12px;
+  color: #886a53;
+}
+
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.kanban-cards .empty-state {
+  padding: 50px 10px;
+}
+
+.completed-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  color: #8a847b;
+  font-size: 11px;
+  padding: 20px 4px;
+}
+
+.completed-footer>div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #63906c;
+  font-weight: 700;
+}
+
+.completed-footer p {
+  margin: 0;
+}
+
+@media(max-width:1040px) {
+  .kanban-grid {
+    gap: 10px;
+  }
+  .kanban-column {
+    padding: 10px;
+  }
+}
+
+@media(max-width:780px) {
+  .kanban-grid {
+    grid-template-columns: 1fr;
+  }
+  .kanban-column {
+    min-height: 160px;
+  }
+}
+
+
